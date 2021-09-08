@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Night Vale</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"> <h1>Night Vale</h1> </a>
+      <div class="header-right">
+        <div class="username"></div>
+        <div class="sign-in-button">Sign in</div>
+      </div>
+
+    </header>
+    <main>
+      <section class="sect-left">
+        <nav>
+          <a href="temp.html">News</a>
+          <a href="#">Next</a>
+          <a href="#">Re-education programs</a>
+        </nav>
+      </section>
+
+
+      <section class="sect-main">
+        <div class="main-post">
+          <div class="user-info">
+            <img src="images/headerImage.jpeg" alt="Profile pic" height="40px" width="40px;">
+            <div class="">
+              <h2>Hiram Mcdaniels</h2>
+              <p>4hrs ago</p>
+            </div>
+          </div>
+          <hr>
+          <p>I believe there have been alegations of insurance fraud, I can assure you the secret police have yet to prove them.</p><hr>
+        </div>
+        <!-- <hr class="violet"> -->
+        <div class="comments-section">
+          <form  id="comment-form" action="index.html" onsubmit="userComment(); return false" method="" autocomplete="off">
+            <input id="comment-input" contenteditable="true" type="text" value="" placeholder="Comment Here">
+            <input id="button-cancel" class="hidden" type="button" onclick="cancel()" name="" value="Cancel">
+            <input id="button-comment" class="hidden" type="button" onclick="userComment()"  name="" value="Comment">
+          </form>
+          <div class="comments-list">
+            <div class="user-comment">
+              <div class="user-info">
+                <img src="images/headerImage.jpeg" alt="Profile pic" height="40px" width="40px;">
+                <div class="">
+                  <h2>`+commentsList[i].name+`</h2>
+                  <p>4hrs ago</p>
+                </div>
+                <button type="button" class="hidden edit-comment" name="button">Edit</button>
+                <button type="button" class="hidden del-comment" name="button">Delete</button>
+                <button type="button" class="edit-button" name="button"><img src="images/edit-icon.svg" alt="edit icon" height="20px"> </button>
+              </div>
+              <p class="comment-content">`+commentsList[i].content+`</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="sect-right">
+        <h2>Local ads</h2>
+        <img id="local-ads" src="" alt="">
+      </section>
+      <div class="pop-up hidden">
+        <h2>Wait! you should sign in!</h2>
+        <form action="index.html" onsubmit="inputUsername(); return false" method="">
+          <input id="username-input" type="text" name="username" value="">
+          <input type="submit" name="" value="Sign in">
+        </form>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
